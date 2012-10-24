@@ -7,6 +7,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
+/**
+ * User: yaojiamiao
+ * Date: 12-10-24  
+ * Version: 1.0
+ */
 @MappedSuperclass
 public class BasicModel {
 

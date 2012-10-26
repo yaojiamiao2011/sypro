@@ -16,7 +16,7 @@ import sy.dao.BaseDaoI;
  * @author 孙宇
  * 
  */
-@Repository("baseDao")
+//@Repository("baseDao")
 public class BaseDaoImpl<T> implements BaseDaoI<T> {
 
 	private SessionFactory sessionFactory;

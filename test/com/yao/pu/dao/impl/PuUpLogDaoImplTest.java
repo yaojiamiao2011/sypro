@@ -1,21 +1,10 @@
 package com.yao.pu.dao.impl;
 
-import static org.junit.Assert.*;
-
 import java.util.Date;
 
-import junit.framework.TestCase;
-
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.AnnotationConfiguration;
 import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 
 import basic.BasicSpringTest;
 
@@ -40,6 +29,7 @@ public class PuUpLogDaoImplTest extends BasicSpringTest {
 		
 		t.setYmd(new Date());
 		t.setUpLog("测试一下吧。");
+		t.setAddDate(new Date());
 		
 		//System.out.println(ctx.getBean("TestAccountDAO"));
 		dao1.save(t);

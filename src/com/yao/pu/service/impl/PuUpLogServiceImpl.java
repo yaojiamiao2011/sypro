@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import sy.dao.BaseDaoI;
-import sy.model.Syrole;
 import sy.service.impl.BaseServiceImpl;
 
 import com.yao.pu.model.PuUpLog;

@@ -6,7 +6,7 @@
 	   "
 	id="apacheFtpServer">
 	<listeners>
-		<nio-listener name="default" port="21">
+		<nio-listener name="default" port="22">
 		</nio-listener>
 	</listeners>
 	<file-user-manager file="ftpConfig.properties" />

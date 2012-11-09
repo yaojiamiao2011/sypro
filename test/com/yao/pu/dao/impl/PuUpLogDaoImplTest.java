@@ -29,7 +29,7 @@ public class PuUpLogDaoImplTest extends BasicSpringTest {
 		
 		t.setYmd(new Date());
 		t.setUpLog("测试一下吧。");
-		t.setAddDate(new Date());
+		//t.setAddDate(new Date());
 		
 		//System.out.println(ctx.getBean("TestAccountDAO"));
 		dao1.save(t);

@@ -20,7 +20,7 @@ public class PuUpLogServiceImplTest extends BasicSpringTest{
 		    	PuUpLog t = new PuUpLog();
 		    	t.setUpLog("test on 001");
 		    	t.setNo(1);
-		    	t.setAddDate(new Date());
+		    	//t.setAddDate(new Date());
 		    	//t.setSid((long) 3);
 		    	
 		    	puUpLogService.add(t);

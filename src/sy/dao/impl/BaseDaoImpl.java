@@ -1,6 +1,7 @@
 package sy.dao.impl;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 import org.hibernate.Query;
@@ -8,6 +9,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import com.yao.basic.model.BasicModel;
 
 import sy.dao.BaseDaoI;
 
@@ -35,10 +38,16 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 	}
 
 	public void save(T o) {
+		//if (o is BasicModel)
+		((BasicModel)o).setAddDate(new Date());
+		//((BasicModel)o).setAddMan("add man");
+		
+		//((BasicModel)o).setEditMan("editman");
 		this.getCurrentSession().save(o);
 	}
 
 	public void update(T o) {
+		((BasicModel)o).setEditDate(new Date());
 		this.getCurrentSession().update(o);
 	}
 

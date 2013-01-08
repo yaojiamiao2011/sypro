@@ -52,6 +52,8 @@ public class PuUpLogDaoImplTest extends BasicSpringTest {
 	            System.out.println("---------------");
 	            System.out.println(v.getUpLog());
 	            System.out.println(v.getAddDate());
+	            System.out.println(v.getAddMan());
+	          
 	            System.out.println(i.next());
 	            System.out.println("``````````````````");
 	        }

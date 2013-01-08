@@ -38,16 +38,24 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 	}
 
 	public void save(T o) {
-		//if (o is BasicModel)
-		//((BasicModel)o).setAddDate(new Date());
-		//((BasicModel)o).setAddMan("add man");
+	
+		//System.out.println("class:"+ o.getClass().getSuperclass().getName());
+		if (o.getClass().getSuperclass().getName().equals("com.yao.basic.model.BasicModel"))
+		{
+			((BasicModel)o).setAddDate(new Date());
+			((BasicModel)o).setAddMan("add man");
+		}
 		
-		//((BasicModel)o).setEditMan("editman");
+		
 		this.getCurrentSession().save(o);
 	}
 
 	public void update(T o) {
-		((BasicModel)o).setEditDate(new Date());
+		if (o.getClass().getSuperclass().getName().equals("com.yao.basic.model.BasicModel"))
+		{
+			((BasicModel)o).setEditDate(new Date());
+			((BasicModel)o).setAddMan("edit man");
+		}
 		this.getCurrentSession().update(o);
 	}
 
